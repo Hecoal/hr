@@ -6,7 +6,7 @@ module.exports=(req,res,next)=>{
         const token = req.headers.authorization.split(" ")[1];
         //Is it valid?
         const decoded =jwt.verify(token,"debugkey");
-        req.user=decoded;
+        req.users=decoded;
         //Lets move to employees
         next();
     }catch(error){
