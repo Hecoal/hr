@@ -7,6 +7,7 @@ const employees = require('./Routes/employees.js');
 const users = require('./Routes/users.js');
 
 //Middleware
+const auth = require('./Middleware/auth.js');
 const notFound = require('./Middleware/notFound.js');
 
 app.use(morgan('dev'));
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Route uses
 app.use('/users',users);
+app.use(auth);
 app.use('/employees', employees);
 
 //Invalid url
