@@ -1,0 +1,2 @@
+This git project is an API that provides functionality for human resources (HR). It uses express.js as a web framework and MYSQL as a database. 
+It supports four HTTP methods: GET, POST, DELETE, and PUT. It also implements authentication with JWT, which means that only users who have an account registered in the database can access the API. The API allows users to perform CRUD (create, read, update, delete) operations on human resources data. The API is designed to be fast, secure, and easy to use.
