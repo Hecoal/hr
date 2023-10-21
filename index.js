@@ -6,6 +6,6 @@ app.get('/',(req,res,next)=>{
     res.send('WELCOME');
 });
 
-app.listen(processenv.PORT || 3000, ()=>{
+app.listen(3000, ()=>{
     console.log('Server is running');
 });
