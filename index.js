@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Route uses
-app.use('/user',users);
+app.use('/users',users);
 app.use('/employees', employees);
 
 //Invalid url
