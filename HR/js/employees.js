@@ -29,6 +29,6 @@ function loadEmployees(){
 function displayEmployees(employees){
     var body= document.querySelector('body');
     for(var i =0; i<employees.length;i++){
-        body.innerHTML +=`<h3>${employees[i].name}</h3>`;
+        body.innerHTML +=`<h3> Name: ${employees[i].lastName} ${employees[i].name}, Phone Number: ${employees[i].phoneNumber}, Email:${employees[i].email}  </h3>`;
     }
 }

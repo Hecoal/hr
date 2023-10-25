@@ -15,7 +15,7 @@
     <!--Axios-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--js-->
-    <script src="./js/employees.js"></script>
+    <script src="./js/addEmployee.js"></script>
     <!--Styles-->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -29,10 +29,10 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="employees.html">Home</a>
+                <a class="nav-link" href="./employees.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="add.html">Add</a>
+                <a class="nav-link" href="#">Add</a>
               </li>
             </ul>
           </div>
@@ -43,14 +43,27 @@
       <div class="container">
         <div class="card border-0 shadow my-5">
           <div class="card-body p-5">
-            <h1 class="fw-light">Welcome to HR</h1>
-            <p class="lead query">In this snippet, the background image is fixed to the body element. Content on the page will
-              scroll, but the image will remain in a fixed position!</p>
-            <p class="lead">Scroll down...</p>
-            <div style="height: 700px"></div>
-            <p class="lead mb-0">You've reached the end!</p>
+            <h1 class="fw-light">Add an employee</h1>
+            <p class="lead query">Just fill the form, we take care of the complex stuff</p>
+            <label for="inputPassword5" class="form-label">Name</label>
+            <input type="password" id="inputPassword5" class="form-control">
+
+            <label for="inputPassword5" class="form-label">Last Name</label>
+            <input type="password" id="inputPassword5" class="form-control">
+
+            <label for="inputPassword5" class="form-label">Phone Number</label>
+            <input type="password" id="inputPassword5" class="form-control">
+
+            <label for="inputPassword5" class="form-label">Email</label>
+            <input type="email" id="inputPassword5" class="form-control">
+
+            <label for="inputPassword5" class="form-label">Address</label>
+            <input type="password" id="inputPassword5" class="form-control" >
+
+            <div class="d-grid gap-2 mx-auto">
+                <button class="btn btn-primary" type="button">Add</button>
+            </div>
           </div>
         </div>
       </div>
 </body>
-</html>
