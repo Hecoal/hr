@@ -31,9 +31,10 @@ function login(){
             localStorage.setItem('token', res.data.message);
             window.location.href='employees.html';
         }else{
-            alert('Unsuccesuful login');
+            $('.alert-danger').show();
         }
     }).catch(function(err){
+        $('.alert-danger').show();
         console.log(err);
     });
 }

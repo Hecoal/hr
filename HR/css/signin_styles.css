@@ -1,0 +1,24 @@
+body {
+    background-image: 
+    radial-gradient(
+      farthest-corner circle at 100% 0% in oklab, 
+      oklch(80% .4 222) 0%, oklch(35% .5 313) 100%
+    );
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+    
+.bg-image {
+      background-image: url('https://source.unsplash.com/kKvQJ6rK6S4/660x1000');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+}
+.alert {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+  

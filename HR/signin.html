@@ -5,45 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pokedex</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Signin</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!--Popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>   
-    <script src="./js/signin.js"></script>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Js-->
+    <script src="./js/login.js"></script>
+    <!--Styles-->
+    <link rel="stylesheet" href="./css/signin_styles.css">   
 </head>
 
-<body>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-6 offset-3">
-                <h1>Registro</h1>
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-6 offset-3">
-                <div class="form-group">
-                    <label for="input-mail">Correo electrónico</label>
-                    <input type="email" class="form-control" id="input-mail" placeholder="correo@dominio.ext">
-                    <small class="form-text text-muted">Un correo para registrarte.</small>
-                </div>
-                <div class="form-group">
-                    <label for="input-mail">Nombre</label>
-                    <input type="text" class="form-control" id="input-name" placeholder="Mauricio Arturo Ibarra Corona">
-                    <small class="form-text text-muted">Tu nombre.</small>
-                </div>
-                <div class="form-group">
-                    <label for="input-password">Contraseña</label>
-                    <input type="password" class="form-control" id="input-password" placeholder="***********">
-                </div>
-                <div class="d-flex justify-content-between">
-                    <button class="btn btn-primary">Registrarme</button>
-                    <button class="btn btn-secondary">Iniciar sesión</button>
+<body>    
+    <div class="container-fluid px-5 my-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-sm-6 d-none d-sm-block bg-image"></div>
+                            <div class="col-sm-6 p-4">
+                                <div class="text-center">
+                                    <div class="h3 fw-light">Signin</div>
+                                    <p class="mb-4 text-muted">Welcome to HR!</p>
+                                    <p class="mb-4 text-muted">Create, Read, Update, and Delete in a simple way.</p>
+                                </div>
+
+                                <form id="contactForm">
+                                    <!-- Email Input -->
+                                    <div class="mb-3">
+                                        <label for="input-mail" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="input-mail"
+                                            placeholder="email@provider.ext">
+                                        <small class="form-text text-muted">Use your email to start using HR</small>
+                                    </div>
+
+                                    <!--Name Input-->
+                                    <div class="mb-3">
+                                        <label for="input-mail">Name</label>
+                                        <input type="text" class="form-control" id="input-name" placeholder="Mauricio Arturo Ibarra Corona">
+                                        <small class="form-text text-muted">Your full name.</small>
+                                    </div>
+                                    <!-- Password Input -->
+                                    <div class="mb-3">
+                                        <label for="input-password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="input-password"
+                                            placeholder="***********">
+                                        <small class="form-text text-muted">Your password must be 8-20 characters long, contain letters and numbers.</small>
+                                    </div>
+                                    
+                                    <!-- Submit buttons -->
+                                    <div class="d-grid gap-2 mx-auto">
+                                            <button class="btn btn-primary" type="button">Register</button>
+                                        <button class="btn btn-secondary" type="button">Login</button>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="mb-4 text-muted">Developed by Hector Cortez</p>
+                                    </div>
+                                   
+                            </div>
+
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Your now ready to use HR! Head to Login to start.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        There was an error processing your request.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <script src="./js/signin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

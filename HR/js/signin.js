@@ -23,16 +23,16 @@ function singin(){
         method: 'post',
         url: 'http://localhost:3000/users/signin',
         data: {
-            name:name,
+            userName:name,
             mail:mail,
             password:password
         }
-        //If the login is correct, we redirect to pokedex.html
     }).then(function(res){
         console.log(res);
-        alert('Success');
-        window.location.href='login.html';
+        $('.alert-success').show();
+        //window.location.href='login.html';
     }).catch(function(err){
+        $('.alert-danger').show();
         console.log(err);
     });
 }
