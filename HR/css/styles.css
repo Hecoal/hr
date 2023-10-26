@@ -8,7 +8,7 @@ body {
 }
 
 .container>.card{
-    height: 700px;
+    height: 100%;
 }
 .alert {
     position: fixed;
@@ -16,4 +16,7 @@ body {
     right: 0;
     display: none;
 }
-  
+.results{
+    color:black;
+    z-index: 100;
+}

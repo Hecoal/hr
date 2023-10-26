@@ -27,8 +27,14 @@ function loadEmployees(){
 }
 
 function displayEmployees(employees){
-    var body= document.querySelector('body');
+    var body= document.getElementById('results');
     for(var i =0; i<employees.length;i++){
-        body.innerHTML +=`<h3> Name: ${employees[i].lastName} ${employees[i].name}, Phone Number: ${employees[i].phoneNumber}, Email:${employees[i].email}  </h3>`;
-    }
+        body.innerHTML +=`<h3> Name: ${employees[i].lastName} ${employees[i].name} </h3>`;
+        body.innerHTML +=`<br>`;
+        body.innerHTML +=`<h3> Phone Number: ${employees[i].phoneNumber}</h3>`;
+        body.innerHTML +=`<br>`;
+        body.innerHTML +=`<h3> Email:${employees[i].email} </h3>`;
+        body.innerHTML +=`<hr>`;
+         
+    }   
 }
