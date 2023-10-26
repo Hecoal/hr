@@ -33,7 +33,7 @@ function addEmployee(){
     axios.post(url + '/employees', postData, headers)
     .then(function(res){
         console.log(res);
-        $('.alert-success').show();
+        window.location.href='empoyees.html';
     }).catch(function(err){
         $('.alert-danger').show();
         console.log(err);
