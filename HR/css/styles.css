@@ -10,3 +10,10 @@ body {
 .container>.card{
     height: 700px;
 }
+.alert {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+  
