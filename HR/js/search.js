@@ -1,4 +1,4 @@
-window.onload= init;
+window.onload=init;
 var headers ={};
 var url='http://localhost:3000';
 
@@ -9,23 +9,28 @@ function init(){
                 'Authorization': 'bearer ' + localStorage.getItem('token')
             }
         }
-        loadEmployees();
+        document.querySelector('.btn-primary').addEventListener('click',searchEmp);
 
     }else{
         window.location.href='index.html';
     }
 }
 
-function loadEmployees(){
-    axios.get(url + '/employees',headers)
+function searchEmp(){
+    var employeeName= document.getElementById('input-name').value;
+    
+    var data={
+            name:employeeName,
+    }
+    axios.get(url + '/employees/' + employeeName, headers)
     .then(function(res){
-        displayEmployees(res.data.message);
         console.log(res);
+        displayEmployees(res.data.message);
     }).catch(function(err){
+        $('.alert-danger').show();
         console.log(err);
-    })
+    });
 }
-
 function displayEmployees(employees){
     var body= document.getElementById('results');
     for(var i =0; i<employees.length;i++){

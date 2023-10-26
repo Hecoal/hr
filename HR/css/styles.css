@@ -17,6 +17,7 @@ body {
     display: none;
 }
 .results{
+    font-size: 1rem;
     color:black;
     z-index: 100;
 }

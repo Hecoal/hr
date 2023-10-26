@@ -23,7 +23,7 @@ employees.post("/", async(req,res,next)=>{
     return res.status(500).json({code:500, message:'Empty fields'});
 });
 
-//Delete a Pokemon from an ID
+//Delete an employee from an ID
 employees.delete("/:id([0-9]{1,3})",async(req,res,next)=>{
     const query = `DELETE FROM employees WHERE id=${req.params.id}`;
     const rows= await db.query(query);
